@@ -1,0 +1,126 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root{
+  --ff-titles: 'Staatliches', cursive;
+  --ff-text: 'Palanquin', sans-serif;
+  --bc-body: hsla(233, 100%, 97%, 1);
+  --bc-header: hsla(218, 17%, 62%, 1);
+  --bc-title: hsla(275, 18%, 79%, 1);
+  --fs-text: 1.5rem;
+
+  font-size: 62,5%;
+  --fs-body:1.6rem;
+}
+
+body{
+  color: #ffffff;
+}
+
+.page{
+  text-align: center;
+  margin: 0 auto;
+  max-width: 38.4rem;
+  background: var(--bc-body);
+}
+
+header{
+ background: var(--bc-header);
+ 
+ height: 27.9rem;
+ margin: 0 auto
+}
+
+header img{
+  margin: 3.2rem auto;
+  width: 13.7rem;
+}
+
+header h1{
+  height: 4.9rem;
+  font-family: var(--ff-titles);
+  text-transform: uppercase;
+  font-size: 4.0rem;
+  font-weight: 400;
+  line-height: 34px;
+  letter-spacing: 0.05em;
+  padding: 1.4rem 8.6rem;
+  color: #ffffff;
+  background: var(--bc-title);
+  text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
+}
+
+main{
+  margin-top: 1.4rem;
+}
+
+main p{
+  width: 30.5rem;
+  text-align: center;
+  margin: 0 auto 6.3rem;
+  font-family: var(--ff-text);
+  font-style: normal;
+  font-weight: 400;
+  line-height: 2.0rem;
+  color: #23053A;
+  font-size: var(--fs-text);
+}
+
+main .card{
+  
+  position: relative;
+}
+
+.card img{
+  width: 32.0rem;
+  object-fit: cover;
+  margin-bottom: 3.2rem;
+
+  animation: downtop 700ms reverse;
+}
+
+main .card h2{
+  font-family: var(--ff-titles);
+  font-size: 2.0rem;
+  line-height: 3.4rem;
+  font-style: normal;
+  font-weight: 400;
+
+  color: #4A4E69;
+  background: #FEEAFA;
+  border-radius: 2.0rem;
+  width: 11.2rem;
+  height: 3.5rem;
+  padding: 0.2rem 2.4rem;
+
+  position: absolute;
+  top: 1.7rem;
+  right: 3.9rem;
+
+  animation-name: topdown;
+  animation-duration: 700ms;
+}
+
+@keyframes topdown{
+  0%{
+    opacity: 0;
+    transform: translateY(-15px);
+  }
+
+  100%{
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes downtop{
+
+  100%{
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+}
